@@ -1,27 +1,36 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+header {
+
+    ion-img { 
+        width: 100%;
+    }
+    .logo {
+        width: 40px;
+        // margin-top: 10px;
+    }
+
+    h1 {
+        
+        font-weight: bold;
+        color: #5965E0;
+    }
+
+  
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+main {
+    h5 {
+        font-weight: bold;
+    }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+@media (min-width: 281px) and (max-width: 767px) {
+  
+    /* CSS */
 
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+  }
