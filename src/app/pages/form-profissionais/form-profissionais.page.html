@@ -1,0 +1,49 @@
+<div class="container">
+
+
+
+    <header class="row">
+        <div class="col-3 mt-4 d-flex">
+            <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
+            <h1> Jobs4all</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="row content">
+            <div class="col-12  d-flex justify-content-center align-items-center flex-column">
+                <h5 class="mb-4">
+                    Cadastre-se para conhecer profissionais
+                    <br />
+                    qualificados para sua empresa
+                </h5>
+
+                <form class="row" [formGroup]="formProfessionais">
+                    <div class="col-12 mb-3">
+                      <label for="nome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" formControlName="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label for="empresa" class="form-label">Empresa</label>
+                      <input type="text" class="form-control" id="empresa" formControlName="empresa" placeholder="Digite o nome da empresa na qual é responsável">
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <label for="setor" class="form-label">Setor</label>
+                      <input type="text" class="form-control" id="setor" formControlName="setor" placeholder="Digite o setor da sua empresa">
+                    </div>
+
+                  </form>
+
+
+                <button type="button" class="mt-5 btn btn-primary">Concluir cadastro</button>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
