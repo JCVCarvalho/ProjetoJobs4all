@@ -1,0 +1,77 @@
+<div class="container" overflow-scroll="false">
+
+
+
+    <header class="row">
+        <div class="col-3 mt-4 d-flex">
+            <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
+            <h1> Jobs4all</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="row content">
+            <div class="col-12  d-flex justify-content-center align-items-center flex-column">
+                <h5 class="mb-4">
+                    Cadastre-se para encontrar uma oportunidade
+                   
+                </h5>
+
+                <form class="row" [formGroup]="formOportunidade">
+                    <div class="col-12  mb-3">
+                      <label for="nome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" formControlName="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="nome" class="form-label">E-mail de contato</label>
+                        <input type="email" class="form-control" formControlName="email" placeholder="Digite o seu e-mail para o empregador entrar em contato">
+                      </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <label for="crmn" class="form-label">CRNM</label>
+                      <input type="text" class="form-control" id="crmn" formControlName="crnm" placeholder="Digite o número do documento">
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                      <input type="text" class="form-control" id="dataNascimento" formControlName="dataNascimento" placeholder="DD/MM/YYYY">
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" formControlName="endereco" placeholder="Rua, Bairro Cidade, Estado">
+                      </div>
+
+                      
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="formacaoAcademica" class="form-label">Formação Acadêmica</label>
+                        <input type="text" class="form-control" id="formacaoAcademica" formControlName="formacaoAcademica" placeholder="Faculdade, Curso Técnico">
+                      </div>
+
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="habilidades" class="form-label">Habilidades</label>
+                        <input type="text" class="form-control" id="habilidades" formControlName="habilidades" placeholder="Boa comunicação, excel, trabalho em equipe">
+                      </div>
+
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <textarea class="form-control" placeholder="Digite tua descrição profissional" id="descricao" rows="3"></textarea>
+                      </div>
+
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="tempoExperiencia" class="form-label">Tempo de experiência</label>
+                        <input type="text" class="form-control" id="tempoExperiencia" formControlName="tempoExperiencia" placeholder="5 anos">
+                      </div>
+                  </form>
+
+
+                <button type="button" class="mt-5 mb-5 btn btn-primary">Concluir cadastro</button>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
