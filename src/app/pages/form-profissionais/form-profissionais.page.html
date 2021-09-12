@@ -3,9 +3,9 @@
 
 
     <header class="row">
-        <div class="col-3 mt-4 d-flex">
-            <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
-            <h1> Jobs4all</h1>
+        <div class="col-3 mt-4 d-flex" [routerLink]="['/']">
+             <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
+             <h1> Jobs4all</h1> 
         </div>
     </header>
 
@@ -36,7 +36,7 @@
                   </form>
 
 
-                <button type="button" class="mt-5 btn btn-primary">Concluir cadastro</button>
+                <button type="button" class="mt-5 btn btn-primary" (click)="navigateToFiltroProfissionais()">Concluir cadastro</button>
             </div>
 
 

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Jobs4allService } from 'src/app/jobs4all.service';
 
 @Component({
-  selector: 'app-form-profissionais',
-  templateUrl: './form-profissionais.page.html',
-  styleUrls: ['./form-profissionais.page.scss'],
+    selector: 'app-form-profissionais',
+    templateUrl: './form-profissionais.page.html',
+    styleUrls: ['./form-profissionais.page.scss'],
 })
 export class FormProfissionaisPage implements OnInit {
 
@@ -13,14 +14,34 @@ export class FormProfissionaisPage implements OnInit {
         nome: [null],
         empresa: [null],
         setor: [null],
-        areaAtuacao: [null],
+    });
+
+    constructor(
+        private formBuilder: FormBuilder,
+        private router: Router,
+        private _jobs4allService: Jobs4allService
+
+    ) { }
+
+    ngOnInit() {
+    }
+
+    navigateToFiltroProfissionais() {
+
+        this.requestSaveEmpregador();
         
-      });
+    }
 
-  constructor(private formBuilder: FormBuilder) { }
+    requestSaveEmpregador() {
 
-  ngOnInit() {
-  }
+
+        this._jobs4allService.saveEmpregador(this.formProfessionais.value).subscribe((empregadores) => {
+            console.log(empregadores);
+            this.router.navigate(['/filtre-profissionais']);
+            // this.toasterService.pop('success', 'Cadastro criado com sucesso!');
+            // this.router.navigateByUrl('/login');
+        });
+    }
 
 
 

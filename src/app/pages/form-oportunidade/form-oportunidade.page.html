@@ -3,9 +3,9 @@
 
 
     <header class="row">
-        <div class="col-3 mt-4 d-flex">
-            <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
-            <h1> Jobs4all</h1>
+        <div class="col-3 mt-4 d-flex" [routerLink]="['/']">
+             <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
+             <h1> Jobs4all</h1> 
         </div>
     </header>
 
@@ -24,8 +24,8 @@
                       <input type="text" class="form-control" formControlName="nome" placeholder="Digite seu nome">
                     </div>
                     <div class="col-12 col-md-6 mb-3">
-                        <label for="nome" class="form-label">E-mail de contato</label>
-                        <input type="email" class="form-control" formControlName="email" placeholder="Digite o seu e-mail para o empregador entrar em contato">
+                        <label for="nome" class="form-label">Whatsapp de contato</label>
+                        <input type="number" id="whatsapp" name="whatsapp" class="form-control" formControlName="whatsapp" placeholder="DDDxxxxxxxxx">
                       </div>
                     <div class="col-12 col-md-6 mb-3">
                       <label for="crmn" class="form-label">CRNM</label>
@@ -49,12 +49,20 @@
 
                       <div class="col-12 col-md-6 mb-3">
                         <label for="habilidades" class="form-label">Habilidades</label>
-                        <input type="text" class="form-control" id="habilidades" formControlName="habilidades" placeholder="Boa comunicação, excel, trabalho em equipe">
+                        <select class="form-select" aria-label="Default select example" formControlName="habilidades">
+                            <option value="0">Selecione um item</option>
+                            <option value="1">Boa Comunicação</option>
+                            <option value="2">Excel Avançado</option>
+                            <option value="3"> Inglês </option>
+                        </select>
                       </div>
+
+                    
+    
 
                       <div class="col-12 col-md-6 mb-3">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <textarea class="form-control" placeholder="Digite tua descrição profissional" id="descricao" rows="3"></textarea>
+                        <textarea class="form-control" placeholder="Digite tua descrição profissional" formControlName="descricao" id="descricao" rows="3"></textarea>
                       </div>
 
                       <div class="col-12 col-md-6 mb-3">
@@ -64,7 +72,7 @@
                   </form>
 
 
-                <button type="button" class="mt-5 mb-5 btn btn-primary">Concluir cadastro</button>
+                <button type="button" class="mt-5 mb-5 btn btn-primary" [disabled]="formOportunidade.invalid" (click)="requestSaveEmpregador()">Concluir cadastro</button>
             </div>
 
 
