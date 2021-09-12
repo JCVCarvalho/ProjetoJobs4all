@@ -1,0 +1,66 @@
+<div class="container">
+
+
+
+    <header class="row">
+        <div class="col-3 mt-4 d-flex" [routerLink]="['/']">
+             <ion-img class="logo" src="https://i.ibb.co/k5PMFzc/Logo.png"></ion-img>
+             <h1> Jobs4all</h1> 
+        </div>
+    </header>
+
+    <main>
+
+        <div class="row content d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column">
+                <h5 class="mb-4">
+                    Filtre profissionais pela habilidade desejada
+                </h5>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecione um item para visualizar os perfils</option>
+                    <option value="1">Boa Comunicação</option>
+                    <option value="2">Excel Avançado</option>
+                    <option value="3"> Inglês </option>
+                </select>
+
+            </div>
+            <div class="col-12 mt-4 d-flex flex-wrap">
+                <div class="card" *ngFor="let colaborador of colaboradores" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-img mb-2">
+                            <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+                                alt="">
+                                <h5 class="card-title">{{colaborador.nome}} </h5>
+                        </div>
+                        <p class="card-text">
+                            Sobre: {{colaborador.descricao}}
+                        </p>
+                        <p class="card-text">
+                            Habilidades: {{colaborador.habilidades}}
+                        </p>
+
+                        <p class="card-text">
+                            Tempo de experiência: {{colaborador.tempoExperiencia}}
+                        </p>
+                      
+                       <i class="fab fa-whatsapp"></i> {{colaborador.whatsapp}}
+                        
+                    </div>
+                </div>
+
+               
+
+            </div>
+
+            
+
+        </div>
+
+
+
+
+    </main>
+
+
+</div>
