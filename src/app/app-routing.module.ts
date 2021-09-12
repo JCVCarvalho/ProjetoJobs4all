@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'form-oportunidade',
     loadChildren: () => import('./pages/form-oportunidade/form-oportunidade.module').then( m => m.FormOportunidadePageModule)
   },
+  {
+    path: 'filtre-profissionais',
+    loadChildren: () => import('./filtre-profissionais/filtre-profissionais.module').then( m => m.FiltreProfissionaisPageModule)
+  },
 ];
 
 @NgModule({
