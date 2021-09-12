@@ -1,0 +1,36 @@
+{
+  "empregadores": [
+    {
+      "nome": "Paulo Júnior",
+      "empresa": "CompanyYes",
+      "setor": "Tecnologia da Informação",
+      "id": 1
+    },
+    {
+      "nome": "Diego da Silva",
+      "empresa": "ThreeTime",
+      "setor": "Varejo",
+      "id": 2
+    },
+    {
+      "nome": "Pedro Guilherme",
+      "empresa": "WowTecnology",
+      "setor": "Tecnologia da Informação",
+      "id": 3
+    }
+  ],
+  "colaboradores": [
+    {
+      "nome": "João da Silva",
+      "whatsapp": 51995333333,
+      "crnm": "323992302",
+      "dataNascimento": "20/10/1990",
+      "endereco": "Rua Figueiredo, São Paulo, SP",
+      "formacaoAcademica": "Ensino superior em andamento",
+      "habilidades": "2",
+      "descricao": "Trabalhei por muitos anos na área de administração e tenho conhecimento em excel avançado.",
+      "tempoExperiencia": "8 anos",
+      "id": 1
+    }
+  ]
+}
