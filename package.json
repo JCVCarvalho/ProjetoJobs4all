@@ -9,7 +9,7 @@
     "dev": "concurrently \"ng serve\" \"npm run server\"",
     "server:static": "json-server --watch db.json --port 8080",
     "start": "npm run server",
-    "build": "ng build",
+    "build": "node ./server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
