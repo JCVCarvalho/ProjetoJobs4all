@@ -1,12 +1,12 @@
 {
-  "name": "Jobs4all",
+  "name": "jobs4all",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "server": "node ./server.js",
-    "dev": "concurrently \"ionic serve\" \"json-server --watch db.json --port 8080\"",
+    "dev": "concurrently \"ng serve\" \"npm run server\"",
     "server:static": "json-server --watch db.json --port 8080",
     "start": "npm run server",
     "build": "ng build",
@@ -57,6 +57,7 @@
     "eslint-plugin-prefer-arrow": "1.2.2",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
+    "json-server": "^0.16.3",
     "karma": "~6.3.2",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
@@ -67,5 +68,15 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KRochaS/Jobs4all.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KRochaS/Jobs4all/issues"
+  }
 }
