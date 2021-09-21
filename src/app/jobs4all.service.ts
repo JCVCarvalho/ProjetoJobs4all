@@ -50,6 +50,14 @@ export class Jobs4allService {
                 catchError(this.handleError))
     }
 
+     // Obtem todos os empregadores cadastrados
+     getEmpregadores(): Observable<any[]> {
+        return this.httpClient.get<any[]>(URL_EMPREGADORES)
+            .pipe(
+                retry(2),
+                catchError(this.handleError))
+    }
+
 
 
 

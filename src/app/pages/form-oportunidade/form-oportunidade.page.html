@@ -38,9 +38,15 @@
 
                     <div class="col-12 col-md-6 mb-3">
                         <label for="endereco" class="form-label">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" formControlName="endereco" placeholder="Rua, Bairro Cidade, Estado">
+                        <input type="text" class="form-control" id="endereco" formControlName="endereco" placeholder="Rua, Bairro, Cidade, Estado">
+                        <ion-button [disabled]="!formOportunidade.get('endereco').value" fill="outline" slot="end" (click)="showMap()">Ver no Mapa</ion-button>
                       </div>
 
+                      <div id="map">
+
+                      </div>
+
+                     
                       
                     <div class="col-12 col-md-6 mb-3">
                         <label for="formacaoAcademica" class="form-label">Formação Acadêmica</label>

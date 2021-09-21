@@ -23,12 +23,16 @@ const routes: Routes = [
     path: 'filtre-profissionais',
     loadChildren: () => import('./filtre-profissionais/filtre-profissionais.module').then( m => m.FiltreProfissionaisPageModule)
   },
+  {
+    path: 'empregador-possui-cadastro',
+    loadChildren: () => import('./pages/empregador-possui-cadastro/empregador-possui-cadastro.module').then( m => m.EmpregadorPossuiCadastroPageModule)
+  },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

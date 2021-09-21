@@ -12,9 +12,9 @@ import { FormOportunidadePage } from './form-oportunidade.page';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     FormOportunidadePageRoutingModule,
-    ReactiveFormsModule,
   ],
   declarations: [FormOportunidadePage]
 })

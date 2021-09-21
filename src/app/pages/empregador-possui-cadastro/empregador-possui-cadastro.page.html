@@ -11,15 +11,15 @@
 
     <main>
 
-        <div class="row content">
-            <div class="col-12  d-flex justify-content-center align-items-center flex-column">
+        <div class="row content d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column">
                 <h5 class="mb-4">
-                    Cadastre-se para conhecer profissionais
-                    <br />
-                    qualificados para sua empresa
+                   Faça seu login
                 </h5>
 
-                <form class="row" [formGroup]="formProfessionais">
+            </div> 
+            <div class="col-12 mt-4 d-flex flex-wrap justify-content-center">
+                <form class="row" [formGroup]="login">
                     <div class="col-12 mb-3">
                       <label for="nome" class="form-label">Nome</label>
                       <input type="text" class="form-control" formControlName="nome" placeholder="Digite seu nome">
@@ -28,21 +28,15 @@
                       <label for="empresa" class="form-label">Empresa</label>
                       <input type="text" class="form-control" id="empresa" formControlName="empresa" placeholder="Digite o nome da empresa na qual é responsável">
                     </div>
-                    <div class="col-12 col-md-6 mb-3">
-                      <label for="setor" class="form-label">Setor</label>
-                      <input type="text" class="form-control" id="setor" formControlName="setor" placeholder="Digite o setor da sua empresa">
-                    </div>
-
                   </form>
-
-
-                <button type="button" class="mt-5 btn btn-primary" (click)="navigateToFiltroProfissionais()">Concluir cadastro</button>
-
-                <button type="button" class="mt-5 btn btn-primary" (click)="japossuoCadastro()">Já possuo Cadastro</button>
             </div>
 
-
+            <button type="button" class="mt-5 btn btn-primary col-3" (click)="MakeLogin()">Fazer Login</button>
         </div>
+
+        
+
+
 
 
     </main>

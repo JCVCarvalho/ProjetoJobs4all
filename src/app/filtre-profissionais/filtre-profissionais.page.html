@@ -17,12 +17,15 @@
                     Filtre profissionais pela habilidade desejada
                 </h5>
 
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecione um item para visualizar os perfils</option>
-                    <option value="1">Boa Comunicação</option>
-                    <option value="2">Excel Avançado</option>
-                    <option value="3"> Inglês </option>
-                </select>
+                <form [formGroup]="formFiltro">
+                    <select class="form-select" aria-label="Default select example" formControlName="filtro">
+                        <option value="0">Selecione um item para visualizar os perfils</option>
+                        <option value="1">Boa Comunicação</option>
+                        <option value="2">Excel Avançado</option>
+                        <option value="3"> Inglês </option>
+                    </select>
+
+                </form>
 
             </div>
             <div class="col-12 mt-4 d-flex flex-wrap">
@@ -48,6 +51,11 @@
                         
                     </div>
                 </div>
+
+
+                <div class="alert alert-warning" role="alert" *ngIf="colaboradores.length === 0">
+                    Não foram encontrados usuários com esse filtro
+                  </div>
 
                
 

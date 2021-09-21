@@ -43,6 +43,10 @@ export class FormProfissionaisPage implements OnInit {
         });
     }
 
+    japossuoCadastro() {
+        this.router.navigate(['/empregador-possui-cadastro']);
+    }
+
 
 
 }
